@@ -8,14 +8,16 @@ public class Player
     public int Experience;
     
 
-    public void Attack()
+    public void Attack(int damage)
     {
-        Console.WriteLine($"Player Arin attacks the Orc and deals 20 damage.");
+        Health -= damage;
+        Console.WriteLine($"Player {NameA} attacks the Orc and deals {damage} damage.");
     }
     
-    public void GainExperience()
+    public void GainExperience(int exp)
     {
-        Console.WriteLine("Player Arin gains 50 experience points.");
+        Experience += exp;
+        Console.WriteLine($"Player {NameA} gains {Experience} experience points.");
             
     }
     

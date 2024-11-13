@@ -8,16 +8,18 @@ class Program
         player.NameA = "Arin";
         player.Health = 100;
         player.Level = 1;
-        player.Experience = 100;
+        player.Experience = 0;
+        
 
         Enemy enemy = new Enemy();
         enemy.TypeA = "Orc";
         enemy.Health = 50;
         enemy.Damage = 20;
 
-        player.Attack();
-        player.GainExperience();
+        player.Attack(20);
         
-        enemy.TakeDamage();
+        enemy.TakeDamage(20);
+        
+        player.GainExperience(50);
     }
 }

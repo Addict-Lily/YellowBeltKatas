@@ -6,9 +6,19 @@ public class Enemy
     public int Health;
     public int Damage;
     
-    public void TakeDamage()
+    public void TakeDamage(int damage)
     {
-        Console.WriteLine("Orc takes 20 damage. Remaining Health: 30");
+        if (Health > 0)
+        {
+            Health -= damage;
+            Console.WriteLine($"{TypeA} takes {damage} damage. Remaining Health: {Health}");
+        }
+        else
+        {
+            Console.WriteLine($"{TypeA} takes {damage} damage and is defeated");
+        }
+        
+        
             
     }
 }
