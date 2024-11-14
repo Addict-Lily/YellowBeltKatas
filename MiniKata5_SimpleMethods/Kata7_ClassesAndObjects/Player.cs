@@ -6,6 +6,7 @@ public class Player
     public int Health;
     public int Level;
     public int Experience;
+    public int Damage;
     
 
     public void Attack(int damage)

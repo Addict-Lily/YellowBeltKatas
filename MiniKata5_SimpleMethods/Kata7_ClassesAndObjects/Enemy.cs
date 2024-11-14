@@ -4,7 +4,6 @@ public class Enemy
 {
     public string TypeA;
     public int Health;
-    public int Damage;
     
     public void TakeDamage(int damage)
     {

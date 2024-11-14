@@ -9,12 +9,12 @@ class Program
         player.Health = 100;
         player.Level = 1;
         player.Experience = 0;
-        
+        player.Damage = 20;
 
         Enemy enemy = new Enemy();
         enemy.TypeA = "Orc";
         enemy.Health = 50;
-        enemy.Damage = 20;
+        
 
         player.Attack(20);
         
