@@ -4,11 +4,13 @@ using Kata10_ExtractingInterfacesToReduceCodeDuplication.Interfaces;
 
 public class Player
 {
-    private string Name = "Arin";
+    public string Name {get; private set;}
+    public int Health {get; private set;}
     
-    public string name { get; set; }
+    public Player(string name, int health)
     {
         Name = name;
+        Health = health;
     }
     public void Walk()
     {
