@@ -2,22 +2,25 @@
 
 public class Enemy
 {
-    public string typeA;
+    public string enemy;
     public int health;
-    
-    public void TakeDamage(int damage)
+
+    public Enemy(string enemy, int health)
+    {
+        this.enemy = enemy;
+        this.health = health;
+    }
+
+    public void TakeDamage( int damage)
     {
         if (health > 0)
         {
             health -= damage;
-            Console.WriteLine($"{typeA} takes {damage} damage. Remaining Health: {health}");
+            Console.WriteLine($"{enemy} takes {damage} damage. Remaining Health: {health}");
         }
         else
         {
-            Console.WriteLine($"{typeA} takes {damage} damage and is defeated");
+            Console.WriteLine($"{enemy} takes {damage} damage and is defeated");
         }
-        
-        
-            
     }
 }

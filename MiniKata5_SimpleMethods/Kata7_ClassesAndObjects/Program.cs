@@ -4,20 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        Player player = new Player();
-        player.nameA = "Arin";
-        player.health = 100;
-        player.level = 1;
-        player.experience = 0;
-        player.damage = 20;
+        Player player = new Player("Arin", 100, 1, 0, 20);
+        Enemy enemy = new Enemy("Orc", 50);
 
-        Enemy enemy = new Enemy();
-        enemy.typeA = "Orc";
-        enemy.health = 50;
-        
-
-        player.Attack(20);
-        enemy.TakeDamage(20);
+        player.Attack(enemy);
         player.GainExperience(50);
     }
 }
