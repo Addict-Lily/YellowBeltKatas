@@ -18,4 +18,5 @@ class Program
     {
         Console.WriteLine($"Player healed {healAmount} health points!");
     }
+    
 }
