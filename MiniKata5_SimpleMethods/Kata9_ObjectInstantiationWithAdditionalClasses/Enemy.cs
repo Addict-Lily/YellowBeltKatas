@@ -18,5 +18,4 @@ public class Enemy
         Console.WriteLine($"{Type} takes {damage}. Remaining health: {Health}");
 
     }
-       
 }
