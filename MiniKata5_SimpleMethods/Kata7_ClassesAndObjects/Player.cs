@@ -8,13 +8,13 @@ public class Player
     public int experience;
     public int damage;
 
-    public Player(string nameA, int health, int level, int experience, int damage)
+    public Player(string aNameA, int aHealth, int aLevel, int aExperience, int aDamage)
     {
-        this.nameA = nameA;
-        this.health = health;
-        this.level = level;
-        this.experience = experience;
-        this.damage = damage;
+        nameA = aNameA;
+        health = aHealth;
+        level = aLevel;
+        experience = aExperience;
+        damage = aDamage;
     }
 
     public void Attack(Enemy enemy)
