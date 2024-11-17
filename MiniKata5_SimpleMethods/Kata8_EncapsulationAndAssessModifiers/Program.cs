@@ -9,8 +9,5 @@ class Program
         
         player.GainExperience(50);
         player.GainExperience(60);
-        
-        
-
     }
 }
