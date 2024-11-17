@@ -42,5 +42,4 @@ class Program
         Console.WriteLine($"\nTotal Items in Inventory: {playerInventory.Count}");
         
     }
-    
 }
