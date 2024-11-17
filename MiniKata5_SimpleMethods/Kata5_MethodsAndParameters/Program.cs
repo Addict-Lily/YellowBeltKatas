@@ -7,7 +7,6 @@ class Program
         AttackEnemy("Goblin", 20);
         HealPlayer("Arin", 15);
     }
-    
     static void AttackEnemy(string enemyName, int damage)
     {
         Console.WriteLine($"Attacked {enemyName} and dealt {damage} damage!");
