@@ -2,20 +2,35 @@
 
 public class Enemy
 {
-    public string Type { get; private set; }
-    public int Health { get; private set; }
-    public int Damage { get; private set; }
+    private string enemyType;
+    private int enemyHealth;
+    private int damage;
 
-    public Enemy(string type, int health, int damage)
+    public Enemy(string aEnemyType, int aEnemyHealth, int aDamage)
     {
-        Type = type;
-        Health = health;
-        Damage = damage;
+        EnemyType = aEnemyType;
+        EnemyHealth = aEnemyHealth;
+        Damage = aDamage;
+    }
+    public string EnemyType
+    {
+        get { return enemyType; }
+        set { enemyType = value; }
+    }
+    public int EnemyHealth
+    {
+        get { return enemyHealth; }
+        set { enemyHealth = value; }
+    }
+    public int Damage
+    {
+        get { return damage; }
+        set { damage = value;}
     }
     public void TakeDamage(int damage)
     {
-        Health -= damage;
-        Console.WriteLine($"{Type} takes {damage}. Remaining health: {Health}");
+        EnemyHealth -= damage;
+        Console.WriteLine($"{EnemyType} takes {damage}. Remaining health: {EnemyHealth}");
 
     }
 }

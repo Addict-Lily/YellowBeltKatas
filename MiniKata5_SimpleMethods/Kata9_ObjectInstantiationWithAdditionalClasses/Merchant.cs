@@ -2,17 +2,26 @@
 
 public class Merchant
 {
-    public string Name { get; private set; }
-    public List<string> Inventory { get; private set; }
+    private string merchantName;
+    private List<string>inventory;
 
-    public Merchant(string name, List<string> inventory)
+    public Merchant(string aMerchantName, List<string> aInventory)
     {
-        Name = name;
-        Inventory = inventory;
+        MerchantName = aMerchantName;
+        Inventory = aInventory;
     }
-    
+    public string MerchantName
+        {
+            get { return merchantName; }
+            set { merchantName = value; }
+        }
+    public List<string> Inventory
+    {
+        get { return inventory; }
+        set { inventory = value; }
+    }
     public void Trade()
     {
-        Console.WriteLine($"{Name}'s inventory: {string.Join(",",Inventory)}!");
+        Console.WriteLine($"{merchantName}'s inventory: {string.Join(",",Inventory)}!");
     }
 }

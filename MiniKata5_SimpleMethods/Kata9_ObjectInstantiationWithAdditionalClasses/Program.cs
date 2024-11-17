@@ -8,7 +8,7 @@ class Program
         Enemy enemy = new Enemy("Goblin", 50, 20);
         NPC npc = new NPC("NPC", "Welcome to our village");
         Merchant merchant = new Merchant("Merchant", new List<string> { "Sword", "Shield", "Potion" });
-        
+
         
         player.Attack(enemy,20);
         npc.Talk();

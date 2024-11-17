@@ -2,19 +2,45 @@
 
 public class Player
 {
-    public string Name {get; private set;}
-    public int Health {get; private set;}
-    public int Level {get; private set;} 
+    private string playerName;
+    private int playerHealth;
+    private int level; 
 
-    public Player(string name, int health, int level)
+    public Player(string aPlayerName, int aPlayerHealth, int aLevel)
     {
-        Name = name;
-        Health = health;
-        Level = level;
+        PlayerName = aPlayerName;
+        PlayerHealth = aPlayerHealth;
+        Level = aLevel;
+    }
+    public string PlayerName
+    {
+        get { return playerName; }
+        set { playerName = value; }
+    }
+
+    public int PlayerHealth
+    {
+        get { return playerHealth; }
+        set
+        {
+            if (value >= 0)
+            {
+                playerHealth = value;
+            }
+            else
+            {
+                Console.WriteLine($"{PlayerName}, it seems you're not alive anymore!!");
+            }
+        }
+    }
+    public int Level
+    {
+        get { return level; }
+        set { level = value; }
     }
     public void Attack(Enemy enemy,  int damage)
     {
-        Console.WriteLine($"{Name} attacks {enemy.Type} and deals {damage} damage.");
+        Console.WriteLine($"{PlayerName} attacks {enemy.EnemyType} and deals {damage} damage.");
         enemy.TakeDamage(damage);
     }
 }

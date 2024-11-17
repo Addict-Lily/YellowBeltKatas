@@ -2,17 +2,26 @@
 
 public class NPC
 {
-    public string Name { get; private set; }
-    public string Dialogue { get; private set; }
+    private string npcName;
+    private string npcDialogue;
     
-    public NPC(string name, string dialogue)
+    public NPC(string aNpcName, string aNpcDialogue)
     {
-        Name = name;
-        Dialogue = dialogue;
+        NpcName = aNpcName;
+        NpcDialogue = aNpcDialogue;
     }
-
+    public string NpcName
+    {
+        get { return npcName; }
+        set { npcName = value; }
+    }
+    public string NpcDialogue
+    {
+        get { return npcDialogue; }
+        set { npcDialogue = value; }
+    }
     public void Talk()
     {
-        Console.WriteLine($"{Name} says: {Dialogue}!");
+        Console.WriteLine($"{NpcName} says: {NpcDialogue}!");
     }
 }
