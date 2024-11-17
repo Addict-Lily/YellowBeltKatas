@@ -12,7 +12,7 @@ class Program
     }
     static void Attack(int damage)
     {
-        Console.WriteLine($"Player dealt {damage}!");
+        Console.WriteLine($"Player dealt {damage} damage!");
     }
     static void Heal(int healAmount)
     {

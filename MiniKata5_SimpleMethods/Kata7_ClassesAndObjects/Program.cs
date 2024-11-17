@@ -5,21 +5,19 @@ class Program
     static void Main(string[] args)
     {
         Player player = new Player();
-        player.NameA = "Arin";
-        player.Health = 100;
-        player.Level = 1;
-        player.Experience = 0;
-        player.Damage = 20;
+        player.nameA = "Arin";
+        player.health = 100;
+        player.level = 1;
+        player.experience = 0;
+        player.damage = 20;
 
         Enemy enemy = new Enemy();
-        enemy.TypeA = "Orc";
-        enemy.Health = 50;
+        enemy.typeA = "Orc";
+        enemy.health = 50;
         
 
         player.Attack(20);
-        
         enemy.TakeDamage(20);
-        
         player.GainExperience(50);
     }
 }

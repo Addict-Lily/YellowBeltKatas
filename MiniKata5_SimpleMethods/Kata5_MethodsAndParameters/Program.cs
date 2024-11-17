@@ -4,19 +4,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        string enemyName = "Goblin";
-        int damage = 20;
-        AttackEnemy(enemyName, damage);
-
-        string playerName = "Arin";
-        int healAmount = 15;
-        HealPlayer(playerName, healAmount);
+        AttackEnemy("Goblin", 20);
+        HealPlayer("Arin", 15);
     }
+    
     static void AttackEnemy(string enemyName, int damage)
     {
-        Console.WriteLine($"Attacked {enemyName} and dealt {damage}! ");
+        Console.WriteLine($"Attacked {enemyName} and dealt {damage} damage!");
     }
-
+    
     static void HealPlayer(string playerName, int healAmount)
     {
         Console.WriteLine($"Player {playerName} healed {healAmount} health points!");

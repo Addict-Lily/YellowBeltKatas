@@ -13,9 +13,9 @@ class Program
         enemyNames[3] = "Skeleton";
         enemyNames[4] = "Dragon";
 
-        foreach (string enemyName in enemyNames)
+        foreach (string enemyArray in enemyNames)
         {
-            Console.WriteLine(enemyName);
+            Console.WriteLine(enemyArray);
         }
         
         

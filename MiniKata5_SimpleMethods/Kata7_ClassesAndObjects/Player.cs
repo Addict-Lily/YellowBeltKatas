@@ -2,23 +2,23 @@
 
 public class Player
 {
-    public string NameA;
-    public int Health;
-    public int Level;
-    public int Experience;
-    public int Damage;
+    public string nameA;
+    public int health;
+    public int level;
+    public int experience;
+    public int damage;
     
 
     public void Attack(int damage)
     {
-        Health -= damage;
-        Console.WriteLine($"Player {NameA} attacks the Orc and deals {damage} damage.");
+        health -= damage;
+        Console.WriteLine($"Player {nameA} attacks the Orc and deals {damage} damage.");
     }
     
     public void GainExperience(int exp)
     {
-        Experience += exp;
-        Console.WriteLine($"Player {NameA} gains {Experience} experience points.");
+        experience += exp;
+        Console.WriteLine($"Player {nameA} gains {experience} experience points.");
             
     }
     

@@ -5,30 +5,29 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Enemies: ");
-        
         string[] enemyNames = { "Goblin", "Orc", "Troll"};
 
-        foreach (string enemyName in enemyNames)
+        foreach (string enemyArray in enemyNames)
         {
-            Console.WriteLine(enemyName);
+            Console.WriteLine(enemyArray);
         }
+        
         
         Console.WriteLine("\nPlayer inventory: ");
-
         List<string> playerInventory = new List<string> {"Sword", "Shield", "Potion"};
         
-        foreach (string playersInventories in playerInventory)
+        foreach (string playersArray in playerInventory)
         {
-            Console.WriteLine(playersInventories);
+            Console.WriteLine(playersArray);
         }
         
+        
         Console.WriteLine("\nUpdated Inventory: ");
-
         playerInventory.Add("Helmet");
         
-        foreach (string playersInventories in playerInventory)
+        foreach (string playerArray in playerInventory)
         {
-            Console.WriteLine(playersInventories);
+            Console.WriteLine(playerArray);
         }
         
     }
