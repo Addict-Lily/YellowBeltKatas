@@ -26,4 +26,5 @@ class Program
         Console.WriteLine($"Damage: {enemy.damage}");
 
     }
+    
 }
