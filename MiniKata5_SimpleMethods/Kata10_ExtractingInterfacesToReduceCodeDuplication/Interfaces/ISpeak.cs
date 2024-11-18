@@ -1,6 +1,6 @@
 ﻿namespace Kata10_ExtractingInterfacesToReduceCodeDuplication.Interfaces;
 
-public interface INPC
+public interface ISpeak
 {
-  void Talk();
+  void Speak();
 }

@@ -1,10 +1,30 @@
 ﻿namespace Kata10_ExtractingInterfacesToReduceCodeDuplication.Actors;
-using Kata10_ExtractingInterfacesToReduceCodeDuplication.Interfaces;
-public class Merchant
+using Interfaces;
+public class Merchant : ISpeak
 {
-    public void Talk()
+    private string merchantName;
+    private List<string>inventory;
+
+    public void Speak()
     {
-        Console.WriteLine("I have Sword, Shield and Potion.");
+        Console.WriteLine($"{merchantName} said Let's trade!");
+        Console.WriteLine($"{merchantName}'s inventory: {string.Join(",",Inventory)}!");
+    }
+
+    public Merchant(string aMerchantName, List<string> aInventory)
+    {
+        MerchantName = aMerchantName;
+        Inventory = aInventory;
+    }
+    public string MerchantName
+    {
+        get { return merchantName; }
+        set { merchantName = value; }
+    }
+    public List<string> Inventory
+    {
+        get { return inventory; }
+        set { inventory = value; }
     }
     
 }
