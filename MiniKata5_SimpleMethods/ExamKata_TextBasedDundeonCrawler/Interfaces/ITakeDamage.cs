@@ -2,5 +2,5 @@
 
 public interface ITakeDamage
 {
-    void Hunt(Character target);
+    void Hunt();
 }
