@@ -1,6 +1,5 @@
-﻿namespace Kata10_ExtractingInterfacesToReduceCodeDuplication.Interfaces;
-using Actors;
-//How to write this line correct?
+﻿namespace Kata10;
+
 class Program
 {
     static void Main(string[] args)
@@ -12,7 +11,7 @@ class Program
         
         player.Walk();
         player.Speak();
-        player.Hunt();
+        player.Hunt(enemy);
         
         Console.WriteLine();
         
@@ -20,7 +19,7 @@ class Program
         
         Console.WriteLine();
         
-        enemy.Hunt();
+        enemy.Hunt(player);
         
         Console.WriteLine();
         

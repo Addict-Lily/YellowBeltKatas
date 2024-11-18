@@ -1,4 +1,4 @@
-﻿namespace Kata10_ExtractingInterfacesToReduceCodeDuplication.Interfaces;
+﻿namespace Kata10;
 
 public interface IWalk
 {

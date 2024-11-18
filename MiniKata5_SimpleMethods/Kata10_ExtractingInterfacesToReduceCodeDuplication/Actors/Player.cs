@@ -1,20 +1,29 @@
-﻿namespace Kata10_ExtractingInterfacesToReduceCodeDuplication.Actors;
-using Interfaces;
-public class Player : IWalk, ISpeak, ITakeDamage
+﻿namespace Kata10;
+public abstract class Character : ITakeDamage
+{
+    public string Name { get; set; }
+    public int Health { get; set; }
+    public virtual void Hunt(Character target)
+    {
+        Console.WriteLine($"{Name} is hunting koje je ime{target.Name}.");
+    }
+}
+public class Player : Character, IWalk, ISpeak
 {
     public void Walk()
     {
-        Console.WriteLine($"{playerName} walking...");
+        Console.WriteLine($"{playerName} is walking...");
     }
 
     public void Speak()
     {
-        Console.WriteLine($"{playerName} speaking...");
+        Console.WriteLine($"{playerName} is speaking...");
     }
-    public void Hunt()
+    public override void Hunt(Character target)
     {
         //How to write name of the enemy?
-        Console.WriteLine($"{playerName} is hunting {GetType().Name}...");
+        Console.WriteLine($"{playerName} is hunting {target.Name}...");
+        target.Health -= 10;
     }
     
     private string playerName;

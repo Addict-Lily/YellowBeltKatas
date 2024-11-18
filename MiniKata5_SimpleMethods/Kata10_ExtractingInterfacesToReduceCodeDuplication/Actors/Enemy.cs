@@ -1,17 +1,15 @@
-﻿namespace Kata10_ExtractingInterfacesToReduceCodeDuplication.Actors;
-using Interfaces;
-public class Enemy : ITakeDamage
+﻿namespace Kata10;
+public class Enemy : Character
 {
     private string enemyType;
     private int enemyHealth;
     private int damage;
 
-    public void Hunt()
+    public override void Hunt(Character target)
     {
         //How to write name of the player?
-        Console.WriteLine($"{enemyType} is hunting Arin...");
+        Console.WriteLine($"{enemyType} smelled its target and is hunting Arin...");
     }
-
     public Enemy(string aEnemyType, int aEnemyHealth, int aDamage)
     {
         EnemyType = aEnemyType;
@@ -36,7 +34,6 @@ public class Enemy : ITakeDamage
     public void TakeDamage(int damage)
     {
         EnemyHealth -= damage;
-        Console.WriteLine($"{EnemyType} takes {damage}. Remaining health: {EnemyHealth}");
-
+        Console.WriteLine($" This one{EnemyType} takes {damage}. Remaining health: {EnemyHealth}");
     }
 }

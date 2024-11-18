@@ -1,5 +1,4 @@
-﻿namespace Kata10_ExtractingInterfacesToReduceCodeDuplication;
-using Interfaces;
+﻿namespace Kata10;
 
 public class NPC : IWalk, ISpeak
 {
